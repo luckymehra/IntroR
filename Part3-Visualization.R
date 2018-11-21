@@ -83,7 +83,7 @@ is.data.frame(fungicide)
 # 
 #  1. your original data is in tact
 #  2. you have a trail of self-documenting changes
-#  3. your future self will tank you
+#  3. your future self will thank you
 # 
 # In order to use our data with ggplot2, we need to make sure it is in a "tidy"
 # form where we have one observation per row. We currently have six observations
@@ -314,7 +314,7 @@ fungicide.plot
 # 
 # To break down what the above function did, it first took in the data set 
 # `fungicide.tidy` and then mapped the x and y aesthetics to the Julian.Date and
-# Severity columns. Effectively, this told ggplot how big our canvas needs to be
+# Severity columns, respectively. Effectively, this told ggplot how big our canvas needs to be
 # in order to display our data, but currently, it doesn't know HOW we want to
 # display our data; we need to give it a specific geometry.
 # 
@@ -346,7 +346,7 @@ fungicide.plot
 
 # We now have a fully functional and informative plot using only three lines of
 # code! Producing a visualization of your data can be an extremely useful tool
-# for analysis because it can allow you to see if there are any strange patterns
+# for analysis, because it can allow you to see if there are any strange patterns
 # or spurious correlations in your variables. 
 # 
 # 

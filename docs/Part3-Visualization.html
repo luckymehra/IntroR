@@ -399,12 +399,12 @@ div.tocify {
 </ul>
 <p>We will be using the <em>ggplot2</em> and <em>tidyr</em> packages</p>
 <pre class="r"><code>&gt; library(&quot;tidyverse&quot;)</code></pre>
-<pre><code>-- Attaching packages ---------------------------------------------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
+<pre><code>-- Attaching packages ---------------------------------------------------------------- tidyverse 1.2.1 --</code></pre>
 <pre><code>v ggplot2 3.0.0     v purrr   0.2.5
 v tibble  1.4.2     v dplyr   0.7.6
 v tidyr   0.8.1     v stringr 1.3.1
 v readr   1.1.1     v forcats 0.3.0</code></pre>
-<pre><code>-- Conflicts ------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+<pre><code>-- Conflicts ------------------------------------------------------------------- tidyverse_conflicts() --
 x dplyr::filter() masks stats::filter()
 x dplyr::lag()    masks stats::lag()</code></pre>
 </div>
@@ -447,7 +447,7 @@ cols(
 <ol style="list-style-type: decimal">
 <li>your original data is in tact</li>
 <li>you have a trail of self-documenting changes</li>
-<li>your future self will tank you</li>
+<li>your future self will thank you</li>
 </ol>
 <p>In order to use our data with ggplot2, we need to make sure it is in a “tidy” form where we have one observation per row. We currently have six observations per row. Thus, we will need to reshape this data from this:</p>
 <pre><code>  Julian.Date TwentyOneThirtySevenWheat TwentyOneThirtySevenWheat.trt CutterWheat CutterWheat.Trt JaggerWheat JaggerWheat.Trt
@@ -649,7 +649,7 @@ cols(
 <pre class="r"><code>&gt; fungicide.plot</code></pre>
 <p><img src="Part3-Visualization_files/figure-html/unnamed-chunk-17-1.png" width="100%" style="display: block; margin: auto;" /></p>
 <p>Now you should see a plot with nothing on it where the x and y axes are labeled “Julian.Date” and “Severity”, respectively.</p>
-<p>To break down what the above function did, it first took in the data set <code>fungicide.tidy</code> and then mapped the x and y aesthetics to the Julian.Date and Severity columns. Effectively, this told ggplot how big our canvas needs to be in order to display our data, but currently, it doesn’t know HOW we want to display our data; we need to give it a specific geometry.</p>
+<p>To break down what the above function did, it first took in the data set <code>fungicide.tidy</code> and then mapped the x and y aesthetics to the Julian.Date and Severity columns, respectively. Effectively, this told ggplot how big our canvas needs to be in order to display our data, but currently, it doesn’t know HOW we want to display our data; we need to give it a specific geometry.</p>
 </div>
 <div id="adding-a-geometry-layer" class="section level3">
 <h3>Adding a geometry layer</h3>
@@ -663,7 +663,7 @@ cols(
 <p>Now you can see that we not only have lines on our plot displaying the data, but we also have automatic legends. To highlight the time intervals, we can also add points to the plot by using <code>geom_point()</code>. Note that we don’t need to add any aesthetics to these since they are simply reenforcing the lines.</p>
 <pre class="r"><code>&gt; (fungicide.plot &lt;- fungicide.plot + geom_point())</code></pre>
 <p><img src="Part3-Visualization_files/figure-html/unnamed-chunk-19-1.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>We now have a fully functional and informative plot using only three lines of code! Producing a visualization of your data can be an extremely useful tool for analysis because it can allow you to see if there are any strange patterns or spurious correlations in your variables.</p>
+<p>We now have a fully functional and informative plot using only three lines of code! Producing a visualization of your data can be an extremely useful tool for analysis, because it can allow you to see if there are any strange patterns or spurious correlations in your variables.</p>
 </div>
 <div id="question" class="section level3">
 <h3>Question</h3>

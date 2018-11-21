@@ -13,7 +13,7 @@
 # Part 1: How to use this R script
 # -------------------------------
 # 
-# A script is a text document that contains instructions and commands The # 
+# A script is a text document that contains instructions and commands. The # 
 # symbol is used to leave comments, which R will not try to interpret as a 
 # command.
 # 
@@ -70,11 +70,11 @@ pi^2   # this does the same thing because ^ is, here, interpreted as "taken to t
 # re-type them.  By virtue, objects are only created once something has been 
 # assigned to them.  Anything can be stored in an object, including figures!
 
-# Let's repeat our simple math calculation above, this time using objects. It we
+# Let's repeat our simple math calculation above, this time using objects. If we
 # want to calculate (5+1)/3 using objects, it needs to look like this: (a+b)/c
 # The objects a, b, and c do not exist yet, so we need to assign values to them
 # in order to create them. R interprets the less than symbol and dash as
-# "assign".  So we need to do the following:
+# "assign" (shortcut: Alt + '-'). So we need to do the following:
 
 a <- 5   # assign the number 5 to a
 b <- 1   # assign number 1 to b
@@ -184,11 +184,11 @@ length(name)
 
 # Let's compare this to a vector that contains only numeric data. For this 
 # example, let's create three objects to represent today's date in numbers for
-# the month (05), day (24), and year (2017).
+# the month (11), day (21), and year (2018).
 
-month <- 05
-day <- 24
-year <- 2017
+month <- 01
+day <- 21
+year <- 2018
 
 # combine those three objects using the *combine* function:
 today <- c(month, day, year)
@@ -213,7 +213,7 @@ c("May", day, year)
 # structure of this vector, we can wrap the statement within the str() function,
 # as shown below. We also want to inspect the data class (ie. whether numeric or 
 # character) using the function class().  Don't forget to use the up-arrow to
-# access the last like that you ran!
+# access the last command that you ran!
 
 str(c("May", day, year)) # this shows us the structure of the object
 class(c("May", day, year))
@@ -260,7 +260,7 @@ month <- rep(month, times = 31)
 
 length(month)
 
-# There are 31 elements in this vector and we can inspect individual elements in the
+# There are 31 elements in this vector, and we can inspect individual elements in the
 # vector based on their ordered position using square brackets:
 
 day[24]  
@@ -291,8 +291,8 @@ length(year)
 # Part 4: Data frames
 # --------------------
 # 
-# Remember that our goal here is to create a table with the columns "month",
-# "day", and "year". First, here's a quick reminder of what we want this to
+# Remember that our goal here is to create a table with the columns "day", "month",
+# and "year". First, here's a quick reminder of what we want this to
 # look like:
 # 
 # ```
@@ -344,8 +344,8 @@ May$year
 # You can see that these are the same as the vectors we created earlier.
 # 
 # Because this object is rather large, we didn't get to see the top rows of the 
-# obect.  A quick way to look at the top of the object is with the `head()`
-# function and if we wanted to look at the bottom, we would use `tail()`.
+# obect. A quick way to look at the top of the object is with the `head()`
+# function, and if we wanted to look at the bottom, we would use `tail()`.
 
 head(may)  # if this didn't work, double-check that you spelled the object name correctly
 

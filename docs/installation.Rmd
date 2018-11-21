@@ -30,7 +30,7 @@ everything up to date, UBC's [STAT545] page is an excellent resource.
  - [R]
  - [RStudio]
  - [Workshop Materials] (zip file; unzip to Desktop)
- - (Once you've installed R) packages "[tidyverse]" and "[agricolae]"
+ - (Once you've installed R) install packages "[tidyverse]" and "[agricolae]"
 
 ### Verification
 
@@ -39,7 +39,7 @@ Once you have installed [R], we should verify that you have the correct version.
  1. Open R (or RStudio) on your computer
  2. Enter the following in the R console after the `>`    
         
-        R.version.string == "R version 3.4.0 (2017-04-21)"
+        R.version.string == "R version 3.5.1 (2018-07-02)"
         
  3. Make sure the result is **`[1] TRUE`**    
     (If the result is `[1] FALSE`, please quit R and try the installation again)
@@ -61,9 +61,10 @@ Our [workshop materials] is a zip file that contains a folder called
 ├── README.md
 ├── data/
 │   ├── FungicideExample.csv
-│   └── README.md
+│   ├── README.md
 └── docs/
     └── ...
+
 ```
 
 We are providing the R scripts for the workshop. We will be live-coding these
@@ -74,7 +75,8 @@ code in these scripts to follow along.
 
 ### Installing Packages
 
-To install [tidyverse] and [agricolae] to your system, open R and type:
+To install [tidyverse] and [agricolae] to your system, open RStudio and in Console type the following
+command after `>`:
 
 ```{r, eval = FALSE}
 install.packages(c("tidyverse", "agricolae"), repos = "https://cran.rstudio.com")
@@ -84,6 +86,6 @@ install.packages(c("tidyverse", "agricolae"), repos = "https://cran.rstudio.com"
 [stat545]: http://stat545.com/block000_r-rstudio-install.html
 [R]: https://cloud.r-project.org/
 [RStudio]: https://www.rstudio.com/products/rstudio/download/
-[Workshop Materials]: https://github.com/everhartlab/IntroR/archive/master.zip
+[Workshop Materials]: https://github.com/luckymehra/IntroR/archive/master.zip
 [agricolae]: http://tarwi.lamolina.edu.pe/~fmendiburu/
 [tidyverse]: http://tidyverse.org/

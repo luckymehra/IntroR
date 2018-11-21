@@ -7,7 +7,7 @@ title: "Introduction to R"
 
 
 An introduction to R for plant pathologists originally written by Drs. Sydney E. Everhart
-and Zhian N. Kamvar
+and Zhian N. Kamvar. Presented by Dr. Lucky Mehra at Kansas State University.
 
 This repository is intended to serve as an additional resource for the short 
 workshop to be given at Kansas State Univeristy in summer of 2019. The source code can be found at 
@@ -15,7 +15,7 @@ https://github.com/luckymehra/IntroR.
 
 ## About 
 
-This introduction to R is designed to be a companion to a workshop lasting 4 
+This introduction to R is designed to be a companion to a workshop lasting 3 
 hours introducing plant pathologists to the basics of R by using a 
 [real world stripe rust example]. 
 

@@ -31,6 +31,7 @@ getwd()
 
 list.files(".")
 
+
 # You can see that the first entry in here is "data". This is where we've placed
 # the fungicide example data. 
 
@@ -43,7 +44,7 @@ list.files("data")
 # We can use the `read.table()` function to read these data in to R. It's
 # important to remember that while in R, these data are simply a copy kept *in
 # memory*, not on the disk, so we don't have to worry too much about
-# accidentally deleting the data :).
+# accidentally deleting the data `r emo::ji("smile")`.
 # 
 # So, how do we actually USE the `read.table()` function? A good first step to
 # figuring out how you can use a function is to look at it's help page. The way
@@ -66,7 +67,7 @@ stop("
 #  2. If the first row are column names        : yes
 #  3. The separator for each cell in the data  : comma
 # 
-# Now that we have these elements, we can read the data into a variable, which
+# Now that we have these elements, we can read the data into an object, which
 # we can call "fungicide". Once we do this, we can check the dimensions to make
 # sure that we have all of the data.
 
@@ -90,7 +91,7 @@ str(fungicide)
 # 
 # The data presented here are from
 # http://www.apsnet.org/edcenter/advanced/topics/EcologyAndEpidemiologyInR/DiseaseProgress/Pages/StripeRust.aspx
-# and consist of three cultivars of wheat treated with different fungicides 
+# and consist of three cultivars of wheat treated with different fungicides. 
 # Jagger wheat is a succeptible variety whereas Cutter and 2137 are both 
 # resistant varieties. It is assumed that the fungicide will only be able to 
 # prevent new infections for two weeks after applicaton. With these data, we 
