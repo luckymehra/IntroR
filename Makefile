@@ -16,11 +16,11 @@ docs/data.Rmd : data/README.md
 
 docs/%.Rmd : %.R docs/knitopts.R
 	cat docs/knitopts.R $< | sed "s_^\# _\#\' _" > docs/$<
-	R --slave -e "knitr::spin('docs/$<', knit = FALSE)"
+	R --slave -e "library(knitr); knitr::spin('docs/$<', knit = FALSE)"
 	$(RM) docs/$<
 
 %.html : %.Rmd docs/footer.html docs/_site.yml docs/styles.css
-	R --slave -e "rmarkdown::render_site('$<')"
+	R --slave -e "library(rmarkdown); rmarkdown::render_site('$<')"
 
 .PHONY : clean
 clean :

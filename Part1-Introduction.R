@@ -23,7 +23,7 @@
 # 
 # Copy and paste the following into the console and run it:
 
-    print("the instructor's name is Sydney")  
+    print("the instructor's name is Lucky")  
 
 # Run a single line of your script in the console by placing your cursor on the 
 # line you want to submit and use your cursor to press the "Run" button at the 
@@ -120,8 +120,8 @@ answer*2
 # Let's use my name for this exercise.  Let's create two objects, one for my
 # first name and another for my last name.  
 
-first.name <- "Sydney"
-last.name <- 'Everhart'  # Single quotes work too!
+first.name <- "Lucky"
+last.name <- 'Mehra'  # Single quotes work too!
 
 # We now have those two objects.  Let's look at them.
 
@@ -131,8 +131,8 @@ last.name
 # Since we each have a first name and a family name, I want you to modify these
 # objects so that instead of my name, they contain your name. 
 
-first.name <- "Sydney"  #Replace my name with your own name
-last.name <- "Everhart"
+first.name <- "Lucky"  #Replace my name with your own name
+last.name <- "Mehra"
 
 # Did this work?  Let's look at the two objects:
 

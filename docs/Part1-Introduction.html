@@ -23,8 +23,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -33,10 +33,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -91,6 +93,9 @@ img {
 }
 .tabbed-pane {
   padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
 }
 button.code-folding-btn:focus {
   outline: none;
@@ -367,8 +372,8 @@ div.tocify {
 <p>A script is a text document that contains instructions and commands The # symbol is used to leave comments, which R will not try to interpret as a command.</p>
 <p>The console (below) is for submitting commands to be interpreted in R. To run a command in the console, you can copy+paste it into the console and press enter.</p>
 <p>Copy and paste the following into the console and run it:</p>
-<pre class="r"><code>&gt;     print(&quot;the instructor&#39;s name is Sydney&quot;)  </code></pre>
-<pre><code>[1] &quot;the instructor&#39;s name is Sydney&quot;</code></pre>
+<pre class="r"><code>&gt;     print(&quot;the instructor&#39;s name is Lucky&quot;)  </code></pre>
+<pre><code>[1] &quot;the instructor&#39;s name is Lucky&quot;</code></pre>
 <p>Run a single line of your script in the console by placing your cursor on the line you want to submit and use your cursor to press the “Run” button at the top right. You can also use the shortcut key strokes cmd+enter (mac) or ctrl+enter (PC) to run a single line at a time.</p>
 <p>The two other most important keyboard shortcuts that you’ll want to use are the <em>Tab</em> key to auto-complete your typing at the command line and ctrl+up arrow or cmd+up arrow to access the most recently typed commands.</p>
 <p>You can also select only part of a line to have it run on the console. Try running the following command without copy+paste: print(“my name is _____”)</p>
@@ -419,24 +424,24 @@ div.tocify {
 <pre><code>[1] 4</code></pre>
 <p>The examples above dealt with numeric values assigned to objects. We can also store character data in objects. Since some words and phrases can contain spaces or other punctuation, we need to place our words and phrases inside quotation marks.</p>
 <p>Let’s use my name for this exercise. Let’s create two objects, one for my first name and another for my last name.</p>
-<pre class="r"><code>&gt; first.name &lt;- &quot;Sydney&quot;
-&gt; last.name &lt;- &#39;Everhart&#39;  # Single quotes work too!</code></pre>
+<pre class="r"><code>&gt; first.name &lt;- &quot;Lucky&quot;
+&gt; last.name &lt;- &#39;Mehra&#39;  # Single quotes work too!</code></pre>
 <p>We now have those two objects. Let’s look at them.</p>
 <pre class="r"><code>&gt; first.name</code></pre>
-<pre><code>[1] &quot;Sydney&quot;</code></pre>
+<pre><code>[1] &quot;Lucky&quot;</code></pre>
 <pre class="r"><code>&gt; last.name</code></pre>
-<pre><code>[1] &quot;Everhart&quot;</code></pre>
+<pre><code>[1] &quot;Mehra&quot;</code></pre>
 <p>Since we each have a first name and a family name, I want you to modify these objects so that instead of my name, they contain your name.</p>
-<pre class="r"><code>&gt; first.name &lt;- &quot;Sydney&quot;  #Replace my name with your own name
-&gt; last.name &lt;- &quot;Everhart&quot;</code></pre>
+<pre class="r"><code>&gt; first.name &lt;- &quot;Lucky&quot;  #Replace my name with your own name
+&gt; last.name &lt;- &quot;Mehra&quot;</code></pre>
 <p>Did this work? Let’s look at the two objects:</p>
 <pre class="r"><code>&gt; first.name</code></pre>
-<pre><code>[1] &quot;Sydney&quot;</code></pre>
+<pre><code>[1] &quot;Lucky&quot;</code></pre>
 <pre class="r"><code>&gt; last.name</code></pre>
-<pre><code>[1] &quot;Everhart&quot;</code></pre>
+<pre><code>[1] &quot;Mehra&quot;</code></pre>
 <p>Using a function c() we can tell R to <em>combine</em> these two objects. This function will combine values from the first object with the second object and return them as a single observation. Let’s try it:</p>
 <pre class="r"><code>&gt; c(first.name, last.name)</code></pre>
-<pre><code>[1] &quot;Sydney&quot;   &quot;Everhart&quot;</code></pre>
+<pre><code>[1] &quot;Lucky&quot; &quot;Mehra&quot;</code></pre>
 <p>Notice how the names are returned inside quotation marks, which tells us that these are interpreted as character data in R. You’ll also notice that each name is placed inside quotes and that’s because c() combined names into a single vector that contains two elements, your first and your last name. This brings us to the next part in our introduction, vectors.</p>
 </div>
 <div id="part-3-vectors-and-sequences" class="section level2">
@@ -446,7 +451,7 @@ div.tocify {
 <pre class="r"><code>&gt; name &lt;- c(first.name, last.name)</code></pre>
 <p>We can inspect this object by typing <em>name</em> at the command line. We can inspect the structure of this object using the function str() on name.</p>
 <pre class="r"><code>&gt; str(name)</code></pre>
-<pre><code> chr [1:2] &quot;Sydney&quot; &quot;Everhart&quot;</code></pre>
+<pre><code> chr [1:2] &quot;Lucky&quot; &quot;Mehra&quot;</code></pre>
 <p>This shows us that this is a vector because the elements in it are ordered from 1 to 2 as shown by the [1:2]. This also tells us that this list is a <em>character</em> list, which is indicated by the <em>chr</em> label. We also see the two elements in this vector, which is your first and last name.</p>
 <p>What is the length of your name? We can find out using the function lenght()</p>
 <pre class="r"><code>&gt; length(name)</code></pre>
